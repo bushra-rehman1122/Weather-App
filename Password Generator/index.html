@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/Password Generator/Password Generator.css"> 
+    <title>Password Generator</title>
+    <link rel="icon" href="/images/download.png">
+<body>
+    <div class="container">
+        <h1>Password Generator<i class="fa-solid fa-key"></i></h1>
+        <div class="display-box">
+            <input type="text" id="password" disabled ><!-- "readonly" means that the user cannot altered the data which submitted -->
+            <button class="copy" id="copyIcon"><i class="fa-solid fa-copy"></i></button>
+            
+        </div>
+
+        <div class="setting">
+            <label>
+                Password Lenght
+               <span id="sliderValue"></span>
+            </label>
+            <input type="range" min="1" max="30" value="8" id="lenghtSlide">
+            <label><input type="checkbox"  id="upperCase">Include Uppercase Letters (A-Z)</label>
+            <label><input type="checkbox"  id="lowerCase">Include Lowercase Letters (a-z)</label>
+            <label><input type="checkbox" id="numbers">Include Numbers (0-9)</label>
+            <label><input type="checkbox"  id="symbols">Include Symbols (@#*.)</label>
+            </div>
+      <div class="btn">
+        <button id="generator">Generator <i class="fa-solid fa-arrow-right"></i></button></div>
+    </div>
+    <script src="/Password Generator/Password Generator.js"></script>
+</body>
+</html>
