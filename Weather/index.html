@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/Weather/weather.css">
+    <title>Weather App</title>
+</head>
+<body>
+<div class="container">
+    <div class="search-box">
+            <input type="text" placeholder="Enter Your City..." id="input">
+            <button class="fa-solid fa-magnifying-glass" id="btn"></button>
+    </div>
+    <div class="image-not-found">
+        <p>Sorry ,  Location not found...</p>
+        <img src="/images/404 (1).png" alt="404">
+    </div>
+     <div class="weather">
+        <img src="/images/snow.png" alt="weather image" id="weather-img">
+        <div class="weather-details">
+        <p class="temp">22°C</p>
+        <p class="description">---light rain---</p>
+        </div>
+        <div class="detail-part">
+            <div class="humidity">
+                <i class="fa-solid fa-droplet"></i>
+                <div class="text">
+                    <span id="percentage">47%</span>
+                    <p class="humidity">Humidity</p>
+                </div>
+            </div>
+
+            <div class="wind">
+                  <i class="fa-solid fa-wind"></i>               
+                  <div class="text">
+                    <span id="km">2.06Km/H</span>
+                    <p class="wind">Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+ <script src="/Weather/weather.js"></script>
+</body>
+</html>

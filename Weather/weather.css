@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  border: none;
+  outline: none;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100vh;/* kisi bhi box ko center me lane ke liye height bhi zarori hi */
+   background-color: cadetblue;
+}
+.container{
+  width: 28vw;
+  height: min-content;
+  background-color: rgb(245, 245, 245);
+  padding:2rem ;
+border-radius: 0.8rem;
+
+}
+.search-box{
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  
+}
+.search-box input{
+  padding: 0.6rem;
+  width: 22vw;
+  border-radius: 0.8rem;
+  background-color: rgb(204, 240, 240);
+  color: black;
+  font-weight: bold;
+ }
+.search-box input::placeholder{
+color: black;
+font-weight: bold;
+}
+.search-box button{
+    background-color: rgb(204, 240, 240);
+    padding: 0.7rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+   
+}
+.search-box button:hover{
+  background-color: black;
+  color: white;
+  
+}
+.image-not-found{
+  display: none;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.image-not-found p{
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(255, 0, 0);
+  margin: 1rem;
+}
+.image-not-found img{
+    width: 14vw;
+
+}
+.weather{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.weather img{
+  width: 14vw;
+}
+
+.weather-details .temp{
+  font-weight: bolder;
+  font-size: 2.5rem;
+  text-align: center;
+
+}
+.weather-details .description{
+font-size: 1.3rem;
+text-align: center;
+color:cadetblue;
+font-weight: 600;
+text-transform: capitalize;
+}
+.detail-part{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+
+}
+.detail-part .humidity, .wind{
+  display: flex;
+}
+.detail-part i{
+  font-size: 1.8rem;
+}
+.detail-part .text{
+margin-left: 8px;
+  font-size: 1rem;
+
+}
+.detail-part .text span{
+  font-weight: bold;
+}
+.detail-part .text p{
+  font-family: cursive;
+}
