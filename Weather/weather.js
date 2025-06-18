@@ -33,25 +33,25 @@ async function checkWeather(city) {
             weather_img.src = "/images/wind.png";
             break;
         case 'Rain':
-            weather_img.src ="/images/rain.png";
+            weather_img.src ="/Weather/weather-images/rain.png";
             break;
             case 'Mist':
-            weather_img.src = "/images/mist.png";
+            weather_img.src = "Weather/weather-images/mist.png";
             break;
             // case 'Drizzle':
             // weather_img.src ="/images/drizzle.png";
             // break;
              case 'Clear':
-            weather_img.src = "/images/clear.png";
+            weather_img.src = "/Weather/weather-images/clear.png";
             break;
             case 'Snow':
-            weather_img.src = "/images/snow.png";
+            weather_img.src = "/Weather/weather-images/snow.png";
             break;
              case 'Haze':
-            weather_img.src = "/images/haze.png";
+            weather_img.src = "/Weather/weather-images/haze.png";
             break;
              case 'Clouds':
-            weather_img.src = "/images/overcast cloud.png";
+            weather_img.src = "/Weather/weather-images/overcast cloud.png";
             break;
      }
     console.log(weather_data);//"Wait for the API to respond, then convert the response to JSON format."
