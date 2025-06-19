@@ -53,6 +53,9 @@ async function checkWeather(city) {
              case 'Clouds':
             weather_img.src = "/Weather/weather-images/overcast cloud.png";
             break;
+             case 'Dust':
+            weather_img.src = "/Weather/weather-images/dust.png";
+            break;
      }
     console.log(weather_data);//"Wait for the API to respond, then convert the response to JSON format."
 }
