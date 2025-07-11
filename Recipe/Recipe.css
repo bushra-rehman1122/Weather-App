@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+    
+}
+body{
+    background-image: url("/Recipe/Recipe Images/BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header nav{
+    background:rgb(237, 186, 186) ;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 1;
+    /* z-index only works if the element has position set,It controls which element appears on top when they overlap.box2 will appear on top of box1 because 2 > 1. */
+    padding: 1rem;
+    border: 2px solid white;
+}
+header nav h1{
+font-size: 2rem;
+margin-left: 1rem;
+color: white;
+font-weight: bolder;
+text-transform: uppercase;
+}
+
+header nav form{
+    display: flex;/* makes the children flex items */
+    justify-content: center;
+}
+form input[type="text"]{
+ flex-grow: 1; 
+ /* If you have 3 boxes, and they all have "flex-grow: 1";, they will share space equally.flex-grow only works if the parent container is a flex container. */
+margin-right: 10px;
+}
+header nav form button{
+     padding: 0.5rem;
+    outline: none;
+   border: none;
+   font-weight: bold;
+  border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: white;
+        cursor: pointer;
+
+    }
+header nav form input{
+    padding: 0.5rem;
+    outline: none;
+   border: none;
+   font-weight: bold;
+   width: 19vw;
+   border-radius: 0.5rem;
+  margin-right:0.2rem;
+  font-size: 1rem;
+}
+header nav form input::placeholder{
+      font-size: 1rem;
+}
+
+
+header nav form button:hover{
+        background-color: rgb(245, 169, 16);
+        color: white;
+}
+/* main section (loading) */
+main section .loading{
+    text-align: center;
+    color: rgb(20, 6, 6);
+    /* font-weight: bold; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr)) ;
+    grid-gap: 40px;
+    /* Adds space between grid rows & columns (now gap: works the same). */
+    padding: 20px;
+    width: 80%;
+    margin: 10px auto;
+  place-items: center; 
+  /*  place-items: center;  equivalent to  justify-items: center; horizontal
+align-items: center;   vertical ,Every item in the grid is centered in its cell.*/
+ } 
+ .recipe button{
+  padding: 0.6em;
+  width: 60%;
+  border: 1px solid white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color:  rgb(228, 25, 59);
+  color: white;
+  border-radius:10px ;
+  text-align: center;
+  margin-left: 3.8rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+ }
+ /* recipe-details */
+.recipe-details{
+    display: none;
+    position: fixed;
+    background-color: blanchedalmond;
+width: 40%;
+height: 60%;
+border-radius: 7px;
+color: rgb(239, 98, 145);
+-webkit-transform: translate(-50%,-50%);
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+/* top: 50% + left: 50% puts the top-left corner in the middle.
+translate(-50%, -50%) shifts it back by half of its own width & height → perfect center. */
+overflow-y: scroll;
+border: 3px solid white;
+}
+
+.recipe-details .recipe-icon {
+    border:none;
+    /* padding: 0.3rem;*/
+    font-size: 1.4rem; 
+    background: none;
+    position: absolute;
+    right: 10px;
+    /* background-color: black; */
+    /* color: white; */
+    top: 20px;
+    /* border-radius: 60px; */
+}
+.recipe-details .recipe-icon:hover{
+    background-color: black;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+/* Adding scrollbar */
+.recipe-details::-webkit-scrollbar{
+width: 10px;
+}
+.recipe-details::-webkit-scrollbar-thumb{
+background-color: white;
+border-radius: 10px;
+border: 1px solid black;
+}
+/* --------------------------------------- */
+/* Adding css to the recipe ingrediant */
+.recipe-content .recipeName{
+    font-size: 1.7rem;
+    padding: 0.7rem;
+    display: inline-block;
+    /* word-wrap: break-word; */
+    margin-left: 5rem;
+    color:  rgb(228, 25, 59);
+    text-decoration: underline;
+    background-color: white;
+    line-height: 1.7rem;
+    margin-top: 25px;
+}
+.recipe-content .ingrediantName{
+    font-size: 1.4rem;
+    color: black;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    
+}
+.recipe-content .fullList{
+    margin-left: 20px;
+}
+.recipe-content .instruction{
+    white-space: pre-line;
+
+}
+/* ------------------------------------------- */
+.recipe-content{
+padding: 1.3rem;
+line-height: 1.25rem;
+}
+.recipe button:hover{
+    background-color:white ;
+    color:  rgb(228, 25, 59);
+    border: 3px solid rgb(228, 25, 59)s;
+  }
+.recipe{
+    background-color: rgb(237, 186, 186);
+    display: flex;
+    flex-direction : column;
+    padding-bottom: 0.5rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+    /* ease-in-out → starts slow, speeds up, ends slow */
+}
+.recipe:hover{
+transform: scale(1.05);
+/* When you hover, transform changes → it scales smoothly instead of instantly. */
+/* scale(1) → original size
+scale(1.05) → 5% larger
+scale(0.5) → half the size */
+
+}
+.recipe img{
+    height: 270px;
+
+}
+.recipe h2{
+    color: rgb(228, 25, 59);
+   text-align: center;
+   word-wrap: break-word;
+}
+.recipe p{
+    font-weight: bolder;
+}
+/* Responsive */
+@media screen and (max-width:600px){
+    header nav{
+        flex-direction: column;
+        
+    }
+    header nav form{
+       width: 80%; 
+       margin-top: 10px;
+    }
+    main section p{
+        font-size: 1.4rem;
+    }
+} 
